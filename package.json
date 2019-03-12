@@ -60,6 +60,6 @@
     "solhint": "^1.5.1",
     "solidity-coverage": "^0.5.11",
     "solium": "^1.2.3",
-    "truffle-hdwallet-provider": "^1.0.4"
+    "truffle-hdwallet-provider": "^1.0.0-web3one.5"
   }
 }

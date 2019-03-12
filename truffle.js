@@ -17,12 +17,9 @@ module.exports = {
             gasPrice: 0x01      // <-- Use this low gas price
         },
         rinkeby: {
-            provider: function() {
-                return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/017979832fdd4436b9716c8c25b8cc09")
-            },
-            gasPrice: 9000000000,
-            network_id: 3,
-            gas: 6000000
+            provider: new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/SJNZXWlD8Ed9GGdD4pWl"),
+            network_id: '*',
+            gas: 4500000
         }
     },
     solc: {
