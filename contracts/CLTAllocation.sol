@@ -19,7 +19,13 @@ contract CLTAllocation is Ownable {
         token = _token;
     }
 
-    function allocateTeamTokens(address[] memory _addresses, uint256[] memory _tokens) public onlyOwner {
+    function allocateTeamTokens(
+        address[] memory _addresses,
+        uint256[] memory _tokens
+    )
+        public
+        onlyOwner
+    {
         require(_addresses.length == _tokens.length);
         for (uint256 i = 0; i < _addresses.length; i++) {
             require(_addresses[i] != address(0) && _tokens[i] > 0 && _tokens[i] <= teamTokensSupply);
@@ -29,7 +35,13 @@ contract CLTAllocation is Ownable {
         }
     }
 
-    function allocateAirdropsTokens(address[] memory _addresses, uint256[] memory _tokens) public onlyOwner {
+    function allocateAirdropsTokens(
+        address[] memory _addresses,
+        uint256[] memory _tokens
+    )
+        public
+        onlyOwner
+    {
         require(_addresses.length == _tokens.length);
         for (uint256 i = 0; i < _addresses.length; i++) {
             require(_addresses[i] != address(0) && _tokens[i] > 0 && _tokens[i] <= airdropsTokensSupply);
@@ -39,7 +51,13 @@ contract CLTAllocation is Ownable {
         }
     }
 
-    function allocateAdvisorsTokens(address[] memory _addresses, uint256[] memory _tokens) public onlyOwner {
+    function allocateAdvisorsTokens(
+        address[] memory _addresses,
+        uint256[] memory _tokens
+    )
+        public
+        onlyOwner
+    {
         require(_addresses.length == _tokens.length);
         for (uint256 i = 0; i < _addresses.length; i++) {
             require(_addresses[i] != address(0) && _tokens[i] > 0 && _tokens[i] <= advisorsTokensSupply);

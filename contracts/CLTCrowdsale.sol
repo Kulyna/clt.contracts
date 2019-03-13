@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity 0.5.0;
 
 import 'openzeppelin-solidity/contracts/crowdsale/distribution/RefundableCrowdsale.sol';
 import 'openzeppelin-solidity/contracts/crowdsale/validation/WhitelistCrowdsale.sol';
@@ -67,11 +67,11 @@ contract CLTCrowdsale is Crowdsale, CLTTimedCrowdsale, WhitelistCrowdsale, Minte
         super._preValidatePurchase(_beneficiary, _weiAmount);
     }
 
-    function _updatePurchasingState(address beneficiary, uint256 weiAmount) internal {
+    function _updatePurchasingState(address, uint256 weiAmount) internal {
         tokensSold = tokensSold.add(_getTokenAmount(weiAmount));
     }
 
-    function _postValidatePurchase(address beneficiary, uint256 weiAmount) internal view {
+    function _postValidatePurchase(address, uint256) internal view {
         require(hardCap >= weiRaised());
     }
 

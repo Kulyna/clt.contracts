@@ -8,8 +8,8 @@ module.exports = function (deployer, network, accounts) {
     let precision = "1000000000000000000",
         _unlockTokensTime = parseInt(new Date().getTime() / 1000) + 3600 * 24 * 30,
         preICOStartsAt = parseInt(new Date().getTime() / 1000) + 60,
-        beneficiary = accounts[7],
-        owner = "0x6DFF9C7c1a821190c9f3b34A835A01Dd58C90AF0".toLowerCase(),
+        beneficiary = "0xb75037df93E6BBbbB80B0E5528acaA34511B1cD0".toLowerCase(),
+        owner = "0xb75037df93E6BBbbB80B0E5528acaA34511B1cD0".toLowerCase(),
         token,
         crowdsale,
         allocation;
